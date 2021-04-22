@@ -1,0 +1,40 @@
+{
+    "name": "flynsarmy/wp-specific-cssjs-for-posts-and-pages-plugin",
+    "description": "Add CSS or JavaScript files to a specific page or post, even you can inser &lt;style&gt; or &lt;script&gt; blocks in header, all this from Write/Edit Post/Page panel",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Flyn San",
+            "email": "flynsarmy@gmail.com"
+        },
+        {
+            "name": "Carlos Leopoldo Magaña Zavala"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TTSCJ\\": "TTSCJ"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "php-stubs/wordpress-stubs": "^5.6",
+        "szepeviktor/phpstan-wordpress": "^0.7"
+    },
+    "scripts": {
+        "phpstan": "php -d memory_limit=-1 ./vendor/bin/phpstan analyse",
+        "phpcbf": "vendor/bin/phpcbf --standard=./.phpcs.xml ./",
+        "phpcs":  "vendor/bin/phpcs  -s --standard=./.phpcs.xml ./",
+        "phpcompat": "vendor/bin/phpcs --standard=PHPCompatibility --runtime-set testVersion 8.0.2 ./",
+        "phpunit": "vendor/bin/phpunit ./tests/unit/",
+        "coverage": "vendor/bin/phpunit tests/unit --coverage-html coverage --whitelist src/",
+        "lint": "vendor/bin/parallel-lint --exclude vendor .",
+        "test": [
+            "composer validate --strict",
+            "@phpcs",
+            "@phpstan"
+        ]
+    }
+}
