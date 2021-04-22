@@ -1,10 +1,6 @@
 # Specific CSS/JS for Posts and Pages
-Contributors: flynsarmy, techtastico
-Tags: css, js, javascript, post, posts, page, pages, header
-Requires at least: 3.0
-Tested up to: 5.7.1
-Stable tag: 1.1
-License: GPLv2
+
+![](https://github.com/Flynsarmy/wp-specific-cssjs-for-posts-and-pages-plugin/blob/master/assets/images/screenshot-1.png?raw=true)
 
 With Specific CSS/JS for Posts and Pages you can add CSS or JavaScript files to a specific page or post.
 
